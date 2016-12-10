@@ -6,17 +6,22 @@
 
 	include 'config.php';
 
+/*
 	if (!isset($_REQUEST['play'])){
 		include 'restful-frotz.php';
 		exit();
 	}
+*/
 
 	#
 	# Setup handlers, and start processing the input
 	#
+/*
 	$handler = $_REQUEST['handler'];
 
 	if (!$handler) $handler = 'json';
+*/
+	$handler = 'googleactions';
 
 	$plugin = 'plugins/plugin_'.$handler.'.php';
 	if (file_exists($plugin)){
