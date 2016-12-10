@@ -7,7 +7,7 @@ function handler_input(array &$params) {
 		$command = "";
 	}
 	$params["command"] = $command;
-	$params["session_id"] = hash("sha256", getUser()["user_id"]);
+	$params["session_id"] = sha1(getUser()["user_id"]);
 	$params["data_id"] = "zork1";
 }
 function handler_output(array $data) : array {
